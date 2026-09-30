@@ -1,0 +1,21 @@
+{
+    "name": "tcp-server",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "runArgs": ["--security-opt", "seccomp=unconfined"],
+    "forwardPorts": [8080],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools"
+            ],
+            "settings": {
+                "cmake.generator": "Ninja",
+                "cmake.configureOnOpen": true,
+                "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+            }
+        }
+    }
+}
